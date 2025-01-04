@@ -1,10 +1,9 @@
-export default class StudentDto{
-    private _id:number;
-    private _name:string;
-    private _scores:object;
+export default class StudentDto {
+    private _id: number;
+    private _name: string;
+    private _scores: Record<string, number>;
 
-
-    constructor(id: number, name: string, scores: object) {
+    constructor(id: number, name: string, scores: Record<string, number>) {
         this._id = id;
         this._name = name;
         this._scores = scores;
@@ -18,7 +17,16 @@ export default class StudentDto{
         return this._name;
     }
 
-    get scores(): object {
+    get scores(): Record<string, number> {
         return this._scores;
+    }
+
+
+    set name(name: string) {
+        this._name = name;
+    }
+
+    set scores(scores: Record<string, number>) {
+        this._scores = scores;
     }
 }

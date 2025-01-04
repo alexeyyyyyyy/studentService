@@ -1,23 +1,20 @@
 export default class Student {
-     id: number;
-     name: string;
-     scores: Map<string, number>;
+    id: number;
+    name: string;
+    scores: Record<string, number>;
 
-
-    constructor(id: number, name: string, scores: Map<string, number>) {
+    constructor(id: number, name: string, scores: Record<string, number>) {
         this.id = id;
         this.name = name;
         this.scores = scores;
     }
 
+    addScore(key: string, value: number) {
 
-
-
-        addScore(key:string, value:number) {
-        if(this.scores.get(key) !== undefined) {
-            throw new Error(`Scores with key ${key} is already in use`);
+        if (this.scores[key] !== undefined) {
+            throw new Error(`Scores with key ${key} are already in use`);
         }
-        this.scores.set(key,value);
-    }
 
+        this.scores[key] = value;
+    }
 }
