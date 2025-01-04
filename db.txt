@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "John",
+    "scores": {
+      "math": 75,
+      "eng": 85,
+      "art": 55
+    }
+  },
+  {
+    "id": 2,
+    "name": "John",
+    "scores": {
+      "math": 75,
+      "eng": 85,
+      "art": 55
+    }
+  }
+]
